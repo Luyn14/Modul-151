@@ -1,4 +1,3 @@
-
 @extends('layout')
 
 @section('content')
@@ -11,7 +10,7 @@
 
         <h3 id="text-underlay-log"><b>Flotten Übersicht</b></h3>
         <form method="POST" action="../Controller/login.php">
-        @csrf
+            @csrf
             <div class="row">
                 <div class="col-3 col-xs-5 col-md-5 col-lg-6 col-xl-8">
                     <div class="row">
@@ -24,21 +23,21 @@
                                     <td>
                                         <b>Anzahl Raumschiffe:</b>
                                     </td>
-                                    <td> x<?php /* echo $count_Spaceship */ ?>  </td>
+                                    <td> x<?php /* echo $count_Spaceship */ ?> </td>
                                 </tr>
 
-                                                                <tr>
+                                <tr>
                                     <td>
                                         <b>Anzahl Raumschiffe:</b>
                                     </td>
                                     <td> x </td>
                                 </tr>
-                                        
+
                                 <tr>
                                     <td>
                                         <b>Anzahl Crewmitglieder:</b>
                                     </td>
-                                     <td> x<?php /* echo $count_Crew */ ?>  </td>
+                                    <td> x<?php /* echo $count_Crew */ ?> </td>
                                 </tr>
                             </table>
                         </h4>
@@ -49,9 +48,11 @@
                     <h3 id="text-underlay-log"><b>Aktuelles</b></h3>
                     <div id="underlay">
                         <h4>How to Deal With Rocket Boosters and Other Giant Space Garbage</h4>
-                        As an errant SpaceX rocket booster careens toward the moon, here are some of the ways space agencies and companies are trying to deal with huge pieces of debris.
+                        As an errant SpaceX rocket booster careens toward the moon, here are some of the ways space agencies
+                        and companies are trying to deal with huge pieces of debris.
                         <h4>To Study the Next Earth, NASA May Need to Throw Some Shade</h4>
-                        The agency wants to hunt exoplanets, so it’s designing star shades and coronagraphs that block out starlight and give telescopes a clear view.
+                        The agency wants to hunt exoplanets, so it’s designing star shades and coronagraphs that block out
+                        starlight and give telescopes a clear view.
                     </div>
                 </div>
 
@@ -61,7 +62,7 @@
                 <div class="col">
                     <div class="card" style="width: 25rem;" id="user_loggedin">
                         <div class="card-body">
-                            <h4>Eingelogt als:  </h4>
+                            <h4>Eingelogt als: </h4>
                             <h3 class="card-title">
                                 <a href="/fv_profil">
                                     {{ $crew->firstname }} {{ $crew->lastname }}
@@ -106,17 +107,15 @@
         </form>
     </div>
     <div class="container">
-                            <button class="btn btn-danger" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> Logout </button>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                            @csrf
-                            </form>
+        <button class="btn btn-danger" href="{{ route('logout') }}"
+            onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> Logout </button>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+            @csrf
+        </form>
 
     </div>
 
 
-</body>
+    </body>
 
-</html>
-
-
-
+    </html>

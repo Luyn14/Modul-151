@@ -80,7 +80,7 @@ class UserController extends Controller
 
         $user->delete();
 
-        return redirect('/fv_uebersicht');
+        return redirect('/home');
     }
 }
 

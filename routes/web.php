@@ -66,7 +66,7 @@ Route::get(
     [UserController::class, 'deleteUser']
 )->middleware(['auth', 'agecheck']);
 
-Route::get(
+Route::delete(
     '/fv_delete-crew-y/{userId}',
     [UserController::class, 'delete']
 )->middleware(['auth', 'agecheck']);
